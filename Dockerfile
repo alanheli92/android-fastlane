@@ -16,7 +16,10 @@ RUN apt-get -y install --no-install-recommends \
 ENV SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANDROID_HOME="/usr/local/android-sdk" \
     ANDROID_VERSION=27 \
-    ANDROID_BUILD_TOOLS_VERSION=27.0.2
+    ANDROID_BUILD_TOOLS_VERSION=27.0.2 \
+    LC_ALL "en_US.UTF-8" \
+    LANGUAGE "en_US.UTF-8" \
+    LANG "en_US.UTF-8"
 
 RUN mkdir "$ANDROID_HOME" .android \
     && cd "$ANDROID_HOME" \
