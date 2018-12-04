@@ -23,6 +23,6 @@ RUN mkdir "$ANDROID_HOME" .android \
     && rm sdk.zip \
     && yes | $ANDROID_HOME/tools/bin/sdkmanager --licenses
 
-ENV PATH="$PATH:$ANDROID_HOME/tools/bin"
+ENV PATH="$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
 
