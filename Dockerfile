@@ -25,4 +25,11 @@ RUN mkdir "$ANDROID_HOME" .android \
 
 ENV PATH="$PATH:$ANDROID_HOME/tools/bin:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools"
 
+RUN sdkmanager --update
+RUN sdkmanager "build-tools;${ANDROID_BUILD_TOOLS_VERSION}" \
+    "platforms;android-${ANDROID_VERSION}" \
+    "platform-tools"
+
+
+
 
