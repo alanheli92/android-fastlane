@@ -1,6 +1,6 @@
 FROM ruby
 
-RUN RUN apt-get -y install --no-install-recommends \
+RUN apt-get -y install --no-install-recommends \
     curl \
     python \
     openjdk-8-jdk \
